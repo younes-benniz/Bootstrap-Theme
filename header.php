@@ -18,8 +18,9 @@
 
 
 <header>
+				
 		<nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #e3f2fd; ">
-			<a class="navbar-brand" href="#">Logo</a>
+			<a class="navbar-brand" href="#" ><?php if ( function_exists( 'the_custom_logo' ) ) {the_custom_logo();}?>	</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
