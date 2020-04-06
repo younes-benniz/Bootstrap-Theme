@@ -26,11 +26,21 @@ function load_js() {
 }	
 add_action('wp_enqueue_scripts','load_js');
 
-//additional tools
+// tools
 add_theme_support('menus');
+add_theme_support('post-thumbnails');
+add_theme_support('widgets');
+
+
+
 
 //menu
-
-
-
 require_once( 'bs4navwalker.php' );
+
+register_nav_menus(
+	array
+	(
+		'primary' => 'Main menu',
+		'Secondary' => 'Footer menu',
+	) );
+
