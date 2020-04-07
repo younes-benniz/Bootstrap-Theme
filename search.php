@@ -8,9 +8,11 @@
 						<div class="media-body">
 
 								<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-								<?php the_excerpt();?>
-									<p><?php echo get_the_date();?></p>
-								<a href="<?php the_permalink();?>" class="btn btn-success">Read more</a><br>
+								<div class="container p-3 my-3 bg-primary text-white">
+									<?php the_excerpt();?>
+										<p><?php echo get_the_date();?></p>
+									<a href="<?php the_permalink();?>" class="btn btn-success">Read more</a><br>
+								</div>
 								
 						</div>
 					</li>
