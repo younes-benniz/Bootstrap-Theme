@@ -9,20 +9,15 @@
 					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 				</ol>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img class="mx-auto d-md-block mb-3 " src="http://localhost/wordpress/wp-content/uploads/2020/04/chicago.jpg" alt="First slide">
-						<div class="carousel-caption d-none d-md-block">
-						<a href="#"><h5>First Post</h5></a>
-						<p>Hello ther!</p>
+				<div class="carousel-inner" role="listbox">
+						<?php $slider = get_posts(array('post_type' => 'slider', 'posts_per_page' => 3)); ?>
+						<?php $count = 0; ?>
+						<?php foreach($slider as $slide): ?>
+						<div class="carousel-item <?php echo ($count == 0) ? 'active' : ''; ?>">
+							<img class="mx-auto d-block mb-3" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($slide->ID)) ?>"/>
 						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="mx-auto d-block mb-3" src="http://localhost/wordpress/wp-content/uploads/2020/04/la.jpg" alt="Second slide">
-					</div>
-					<div class="carousel-item">
-						<img class="mx-auto d-block mb-3"  src="http://localhost/wordpress/wp-content/uploads/2020/04/ny.jpg"  class="rounded" alt="Third slide">
-					</div>
+						<?php $count++; ?>
+						<?php endforeach; ?>
 				</div>
 				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>

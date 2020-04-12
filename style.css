@@ -12,3 +12,26 @@ body {
 .page-wrap {
 	padding: 2rem 0;
 }
+
+
+body .navbar-nav li a:hover {
+	background-color: blue ;
+}
+.previous a {
+	text-decoration: none;
+	color:maroon;
+}
+.previous {
+	float: left;
+}
+
+.next a {
+	color: maroon;
+	text-decoration: none;
+}
+
+
+
+.next {
+	float: right;
+}
